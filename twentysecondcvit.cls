@@ -13,7 +13,7 @@
 
 \usepackage{pstricks}
 \defaultfontfeatures{
-    Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
+	Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
 \usepackage{fontawesome}
 \usepackage[italian]{babel}
 \RequirePackage{tikz}
@@ -31,39 +31,39 @@
 \usepackage[nodayofweek]{datetime}
 \setlist[itemize]{leftmargin=*}
 \setlist[description]{%
-   topsep=2pt,               % space before start / after end of list
-  % itemsep=5pt,               % space between items
-  %font={} % set the label font
-  font=\normalfont\itshape\bfseries,
-  before={} % if colour is needed
+	topsep=2pt,               % space before start / after end of list
+	% itemsep=5pt,               % space between items
+	%font={} % set the label font
+	font=\normalfont\itshape\bfseries,
+	before={} % if colour is needed
 }
 
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-    pdftitle={Francesco_Cerizzi_cv},
-    pdfauthor={Francesco_Cerizzi},
-    pdfsubject={Curriculum vitae},
-    pdfkeywords={CV},
-    colorlinks=true, 
-    urlcolor=pblue,
-    allbordercolors=white       % white border color for all
+	pdftitle={Francesco_Cerizzi_cv},
+	pdfauthor={Francesco_Cerizzi},
+	pdfsubject={Curriculum vitae},
+	pdfkeywords={CV},
+	colorlinks=true,
+	urlcolor=pblue,
+	allbordercolors=white       % white border color for all
 }
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
 \ifxetex
-  \usepackage{letltxmacro}
-  \setlength{\XeTeXLinkMargin}{1pt}
-  \LetLtxMacro\SavedIncludeGraphics\includegraphics
-  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
-    \IncludeGraphicsAux{#1}%
-  }%
-  \newcommand*{\IncludeGraphicsAux}[2]{%
-    \XeTeXLinkBox{%
-      \SavedIncludeGraphics#1{#2}%
-    }%
-  }%
+	\usepackage{letltxmacro}
+	\setlength{\XeTeXLinkMargin}{1pt}
+	\LetLtxMacro\SavedIncludeGraphics\includegraphics
+	\def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+	\IncludeGraphicsAux{#1}%
+	}%
+	\newcommand*{\IncludeGraphicsAux}[2]{%
+		\XeTeXLinkBox{%
+			\SavedIncludeGraphics#1{#2}%
+		}%
+	}%
 \fi
 
 %----------------------------------------------------------------------------------------
@@ -103,16 +103,16 @@
 \definecolor{yt}{HTML}{c71610}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+	\colorlet{green}{gray}
+	\colorlet{orange}{gray}
+	\colorlet{purple}{gray}
+	\colorlet{red}{gray}
+	\colorlet{blue}{gray}
+	\colorlet{fillheader}{white}
+	\colorlet{header}{gray}
 \else
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+	\colorlet{fillheader}{white}
+	\colorlet{header}{gray}
 \fi
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
@@ -165,18 +165,18 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\programming[1]{ 
+\newcommand\programming[1]{
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
-			}
+					\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+					\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+					\node [above right] at (0,\i+0.35) {\x};
+				}
 		\end{tikzpicture}
 	}
 }
-\newcommand\education[1]{ 
+\newcommand\education[1]{
 	\renewcommand{\education}{
 		{#1}
 	}
@@ -188,166 +188,165 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\makeprofile}{
-  \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-  \end{tikzpicture}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+	\end{tikzpicture}
 
-  %------------------------------------------------
+	%------------------------------------------------
 
-  \begin{textblock}{6}(0.5, 0.2)
+	\begin{textblock}{6}(0.5, 0.2)
 
-    %------------------------------------------------
-    
-        \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
-    
-    \vspace{3mm}
+		%------------------------------------------------
 
-    %------------------------------------------------
-    \ifthenelse{\equal{\profilepic}{}}{}{
-    {\centering
-    \includegraphics[scale=0.08]{\profilepic}\par}
-    \vspace{3mm}
-    }
-    %------------------------------------------------
+		\vspace{4mm}
+		{\Huge\color{pblue}\cvname}
 
+		\vspace{3mm}
 
-    %------------------------------------------------
-    
-    {\centering\Large\color{black!80}\cvjobtitle\par}
-
-    %------------------------------------------------
+		%------------------------------------------------
+		\ifthenelse{\equal{\profilepic}{}}{}{
+			{\centering
+					\includegraphics[scale=0.08]{\profilepic}\par}
+			\vspace{3mm}
+		}
+		%------------------------------------------------
 
 
-    \vspace{3mm}
-    \renewcommand{\arraystretch}{2}
-    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-      \ifthenelse{\equal{\cvnumberphone}{}}{}{
-      		{$
-              \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile} 
-              \end{array}
-              $} 
-            & \cvnumberphone\\}
-            
-      \ifthenelse{\equal{\cvsite}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
-              \end{array}
-              $} 
-            & \href{http://\cvsite}{\cvsite} \\}
-      \ifthenelse{\equal{\cvmail}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
-              \end{array}
-              $} 
-            & \href{mailto:\cvmail}{\cvmail} \\}
-      
-       \ifthenelse{\equal{\cvlinkedin}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
-              \end{array}
-              $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
-            }  
-        \ifthenelse{\equal{\cvgithub}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faGithub}
-              \end{array}
-              $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            } 
-        \ifthenelse{\equal{\cvhome}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faHome}
-              \end{array}
-              $} & \cvhome \\
-            }   
-            
-    \end{tabular}
+		%------------------------------------------------
 
-    %------------------------------------------------
-    \vspace{3mm}
+		{\centering\Large\color{black!80}\cvjobtitle\par}
 
-    {\centering\profilesection{Technical Skills}{1.2cm}\par}
-
-	\skills
-        
-        %------------------------------------------------
-        
-        \vspace{3mm}
-       
-	 {\centering\large \textbf{Programming}\par} 
-
-		 \programming
-         
-        % \vspace{2mm}
-        % \profilesection{Language\\}{1.2cm} 
-        
-        % \education
+		%------------------------------------------------
 
 
+		\vspace{3mm}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{4mm} \Huge \textnormal{\faMobile}
+							\end{array}
+						$}
+			   & \cvnumberphone\\}
 
-      
-  \end{textblock}
+			\ifthenelse{\equal{\cvsite}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+							\end{array}
+						$}
+			   & \href{http://\cvsite}{\cvsite} \\}
+			\ifthenelse{\equal{\cvmail}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
+							\end{array}
+						$}
+			   & \href{mailto:\cvmail}{\cvmail} \\}
+
+			\ifthenelse{\equal{\cvlinkedin}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+							\end{array}
+			$} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin}  \\
+			}
+			\ifthenelse{\equal{\cvgithub}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{3mm} \huge \textnormal{\faGithub}
+							\end{array}
+			$} & \href{https://www.github.com/\cvgithub}{\cvgithub}       \\
+			}
+			\ifthenelse{\equal{\cvhome}{}}{}{
+				{$
+							\begin{array}{l}
+								\hspace{3mm} \huge \textnormal{\faHome}
+							\end{array}
+			$} & \cvhome                                                  \\
+			}
+		\end{tabular}
+
+		%------------------------------------------------
+		\vspace{3mm}
+
+		{\centering\profilesection{Technical Skills}{1.2cm}\par}
+
+		\skills
+
+		%------------------------------------------------
+
+		\vspace{3mm}
+
+		{\centering\large \textbf{Programming}\par}
+
+		\programming
+
+		% \vspace{2mm}
+		% \profilesection{Language\\}{1.2cm} 
+
+		% \education
+
+
+
+
+	\end{textblock}
 }
 
 %----------------------------------------------------------------------------------------
 %  SIDE BAR PAGE2
 %----------------------------------------------------------------------------------------
 \newcommand{\makenewprofile}{
-  \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-  \end{tikzpicture}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+	\end{tikzpicture}
 
-  %------------------------------------------------
+	%------------------------------------------------
 
-  \begin{textblock}{5.9}(0.5, 0.2)
+	\begin{textblock}{5.9}(0.5, 0.2)
 
-    %------------------------------------------------
-    
-        \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
-    
-    \vspace{2mm}
+		%------------------------------------------------
+
+		\vspace{4mm}
+		{\Huge\color{pblue}\cvname}
+
+		\vspace{2mm}
 
 
-    %------------------------------------------------
-    
-    {\Large\color{black!80}\cvjobtitle}
+		%------------------------------------------------
 
-    %------------------------------------------------
-    \vspace{3mm}
-    {\centering
-    \profilesection{Language\\}{1.2cm}\par}
+		{\Large\color{black!80}\cvjobtitle}
 
-    \lang
+		%------------------------------------------------
+		\vspace{3mm}
+		{\centering
+			\profilesection{Language\\}{1.2cm}\par}
 
- %------------------------------------------------
+		\lang
 
-    \vspace{3mm}
-    {\centering
-    \profilesection{About Me\\}{1.2cm}\par}
+		%------------------------------------------------
 
-    {\aboutMe}
+		\vspace{3mm}
+		{\centering
+			\profilesection{About Me\\}{1.2cm}\par}
 
-    \vspace{1.5mm}
-    {\centering\large \textbf{Interests}\par}
+		{\aboutMe}
 
-    \cvInterest
+		\vspace{1.5mm}
+		{\centering\large \textbf{Interests}\par}
 
-    \vspace{1.5mm}
-    {\centering\large \textbf{Experiences}\par}
+		\cvInterest
 
-    \cvExp
+		\vspace{1.5mm}
+		{\centering\large \textbf{Experiences}\par}
 
-    \vspace{70mm} %adjust to document end
+		\cvExp
 
-    {\footnotesize\cvdate}
-  \end{textblock}
+		\vspace{70mm} %adjust to document end
+
+		{\footnotesize\cvdate}
+	\end{textblock}
 }
 
 
@@ -363,18 +362,18 @@
 
 \def\@sectioncolor#1#2#3{%
 	{%
-		\color{pblue} #1#2#3%
-	}%
+			\color{pblue} #1#2#3%
+		}%
 }
 
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+	\par\vspace{\parskip}
 	{%
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
-  \par\vspace{1mm}
+	\par\vspace{1mm}
 }
 
 \renewcommand{\subsection}[1]{
@@ -395,7 +394,7 @@
 % New environment for the long list
 \newenvironment{twenty}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
+		}{%
 	\end{tabular*}
 }
 
@@ -414,8 +413,8 @@
 		\textbf{#3}% 
 		\hfill%
 		{\footnotesize#4}%
-        }\\%
-    #2&\parbox[t]{0.83\textwidth}{%
+	}\\%
+	#2&\parbox[t]{0.83\textwidth}{%
 		\ifblank{#5}{}{#5 \\}
 		#6%
 	}\\
@@ -430,7 +429,7 @@
 % New environment for the small list
 \newenvironment{twentyshort}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
+		}{%
 	\end{tabular*}
 }
 
@@ -449,23 +448,23 @@
 
 \usepackage{smartdiagram}
 \smartdiagramset{
-    bubble center node font = \footnotesize,
-    bubble node font = \footnotesize,
-    % specifies the minimum size of the bubble center node
-    bubble center node size = 0.5cm,
-    %  specifies the minimum size of the bubbles
-    bubble node size = 0.5cm,
-    % specifies which is the distance among the bubble center node and the other bubbles
-    distance center/other bubbles = 0.3cm,
-    % sets the distance from the text to the border of the bubble center node
-    distance text center bubble = 0.5cm,
-    % set center bubble color
-    bubble center node color = pblue,
-    % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
-    % sets the opacity at which the bubbles are shown
-    bubble fill opacity = 0.6,
-    % sets the opacity at which the bubble text is shown
-    bubble text opacity = 1,
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% specifies the minimum size of the bubble center node
+	bubble center node size = 0.5cm,
+	%  specifies the minimum size of the bubbles
+	bubble node size = 0.5cm,
+	% specifies which is the distance among the bubble center node and the other bubbles
+	distance center/other bubbles = 0.3cm,
+	% sets the distance from the text to the border of the bubble center node
+	distance text center bubble = 0.5cm,
+	% set center bubble color
+	bubble center node color = pblue,
+	% define the list of colors usable in the diagram
+	set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.6,
+	% sets the opacity at which the bubble text is shown
+	bubble text opacity = 1,
 }
 
