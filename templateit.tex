@@ -16,19 +16,19 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\documentclass[letterpaper]{twentysecondcvit} % a4paper for A4
 
 % Command for printing skill overview bubbles
 \newcommand\skills{ 
 ~
 	\smartdiagram[bubble diagram]{
-        \textbf{Software}\\\textbf{Engineering},
-        \textbf{Serverless}\\\textbf{Architectures},
+        \textbf{Ingegneria del}\\\textbf{software},
+        \textbf{Architetture}\\\textbf{Serverless},
         \textbf{Cloud}\\\textbf{Computing},
-        \textbf{Big Data}\\\textbf{Platforms},
-        \textbf{AWS \& Azure}\\\textbf{Platform},
-        \textbf{Approximate}\\\textbf{Computing},
-        \textbf{IoT}\\\textbf{Platforms}
+        \textbf{Piattaforme}\\\textbf{big data},
+        \textbf{Piattaforme}\\\textbf{AWS \& Azure},
+        \textbf{Calcolo}\\\textbf{approssimato},
+        \textbf{Piattaforme}\\\textbf{IoT}
     }
 }
 
@@ -42,8 +42,8 @@
 % }
 
 \lang{
-\textbf{Italian}: native.\\
-\textbf{English}: high intermediate level (B2).
+\textbf{Italian}: madrelingua.\\
+\textbf{English}: B2.
 }
 
 \aboutMe{
@@ -55,8 +55,8 @@
 \cvInterest{{\huge\faPlane \hspace{0.5em} \faFutbolO \hspace{0.5em} \faGamepad \hspace{0.5em} \faBeer \hspace{0.5em} \faTelevision}}
 \cvExp{
     \begin{itemize}
-        \item Clown Therapy \href{http://clowns.it}{@ClownOneItalia}
-        \item Presidente di seggio (Returning officer)
+        \item Clown terapia \href{http://clowns.it}{@ClownOneItalia}
+        \item Presidente di seggio
     \end{itemize}
 }
 
@@ -66,7 +66,7 @@
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
 \cvname{Francesco\\\textbf{Cerizzi}}% Your name
-\cvjobtitle{ Software Engineer } % Job
+\cvjobtitle{ Ingegnere del software } % Job
 % title/career
 \profilepic{img/profile.png}
 \cvlinkedin{francesco-cerizzi}
@@ -74,8 +74,8 @@
 \cvnumberphone{(+39) drop me an email \faPaperPlaneO} % Phone number
 \cvsite{} % Personal website
 \cvmail{fracerri94@gmail.com} % Email address
-\cvhome{Lissone (MB), Italy}
-\cvdate{Last updated 10 April, 2020}
+\cvhome{Lissone (MB), Italia}
+\cvdate{Aggiornato il \shortdate\today}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -89,16 +89,16 @@
 \begin{twenty}
        \twentyitem
         {2017 -}
-        {Present}
+        {Presente}
         {Master of Science in Computer Science and Engineer}
         {}
         {
-        (Thesis dissertation on April 29th 2020)\\ \\
+        (Discussione tesi di laurea il 29 Aprile 2020)\\ \\
         {
         \textbf{Thesis}: Approximate Energy-aware Framework to Support Intermittent Computing
         }
         }
-        {\footnotesize\rightline{\href{https://www.polimi.it/en/}{Politecnico di Milano}}}
+        {\footnotesize\rightline{\href{https://www.polimi.it/}{Politecnico di Milano}}}
 
     \twentyitem
         {2014 - 2016}
@@ -106,7 +106,7 @@
         {Laurea triennale in Ingegneria Informatica}
         {}
         {}
-        {\footnotesize\rightline{\href{https://www.polimi.it/en/}{Politecnico di Milano}}}
+        {\footnotesize\rightline{\href{https://www.polimi.it/}{Politecnico di Milano}}}
 \end{twenty}
 
 
@@ -121,7 +121,7 @@
         {Approximate Energy-aware Framework to Support Intermittent Computing.}
         {}
         {
-        A new class of green and eco-friendly IoT devices, that operate without batteries or tethered power line, is gaining momentum. Indeed batteries have failed to keep pace with trends in chip and circuit and require a lot of maintenance, furthermore exhausted batteries have an impact from an environmental point of view. These devices harvest the energy needed for the computation from the environment, and as a consequence, they have strict energy constraints. My research provides a framework that on these devices achieves, by using approximate computing techniques, the execution of an application inside a user-defined energy budget.
+        Oggigiorno, una nuova tipologia di dispositivi IoT, che operano senza l'utilizzo di batterie, sta guadagnando importanza. Infatti, il progresso delle batterie non ha mantenuto il passo di quello informatico in termini di efficienza e di dimensioni; inoltre le batterie richiedono molta manutenzione e la loro dismissione ha un grande impatto ambientale. Questi dispositivi si alimentano assorbendo energia dall'ambiente che li circonda, per questo motivo hanno vincoli energetici molto stringenti. Il mio lavoro si concentra sul fornire un framework per questi dispostivi che, utilizzando tecniche di calcolo approssimato, riesce ad eseguire un'applicazione all'interno di un budget energetico richiesto dall'utente.
         {
         }
         }
@@ -133,7 +133,7 @@
         {A Runtime Resource Management Policy for OpenCL Workloads on Heterogeneous Multicores.}
         {}
         {
-       Nowadays, runtime workload distribution and resource tuning for heterogeneous multicores running multiple OpenCL applications is still an open quest. We propose an adaptive scheduling policy capable at identifying an optimal working point for an unknown multiprogrammed OpenCL workload without using any design-time application profiling or analysis. The approach compared against a design-time optimization strategy demonstrates to be effective in converging to a solution guaranteeing required performance while minimizing power consumption and maximum temperature. Our scheduler, thanks to a temperature predictor module, avoids frequent temperature changes that are a threat to the dependability of a computer system. We presented and published our results at \href{https://past.date-conference.com}{DATE 2019}.
+       La ricerca sulla distribuzione del carico di lavoro a runtime e sull’ottimizzazione delle risorse in sistemi multicore che eseguono applicazioni OpenCL eterogenee è tutt'oggi in corso. Proponiamo una politica di scheduling adattiva in grado di identificare il punto di lavoro ottimale per un carico di lavoro OpenCL non noto, senza effettuare nessuna profilazione o analisi in fase di progettazione. Il nostro approccio si dimostra, rispetto ad un approccio eseguito in fase di progettazione, efficace nel convergere in una soluzione che garantisce le prestazioni richieste, minimizzando il consumo di energia e la temperatura massima. Il nostro scheduler, grazie a un predittore di temperatura, riesce ad evitare frequenti cambi di temperatura; essi infatti sono una delle maggiori minacce per l'affidabilità di un sistema informatico. Abbiamo presentato e pubblicato i nostri risultati a \href{https://past.date-conference.com}{DATE 2019}.
         {
         }
         }
@@ -144,7 +144,8 @@
         {}
         {Ahù, a Nomadic Smart Space for Children’s Playful Learning and Inclusion.}
         {}
-        {I worked in a team that produced Ahù, a technological featured `totem' to improve learning collaboration and inclusion capabilities in kindergartens and primary schools. Ahù achieves its goals by providing a combination of features that make it unique to the currently available technologies for learning: it has a totem shape, it supports multisensory stimuli by communicating through voice, lights and multimedia contents that are projected on two different fields on the floor and it allows cooperative and competitive games.
+        {
+        Ho lavorato in un team che ha prodotto Ahù, un `totem' tecnologico atto a migliorare la collaborazione e le capacità di inclusione fra bambini di età compresa tra i 3 e gli 8 anni. Ahù raggiunge i suoi obbiettivi alternando attività ludiche e di storytelling, facendo uso di una serie di apparati tecnologici tra cui video proiettori a corto raggio e sensori per il tracciamento dei movimenti.
         {
         }
         }
@@ -176,11 +177,12 @@ D. Angioletti, F. Bertani, C. Bolchini, \textbf{F. Cerizzi} and A. Miele, “A R
 \begin{twenty} % Environment for a list with descriptions
 \twentyitem
     	{2020 -}
-		{Present}
-        {Contributor of Filaindiana.it}
+		{Presente}
+        {Collaboratore di Filaindiana.it}
         {\href{https://www.filaindiana.it}{Filaindiana.it}}
         {}
-        {Filaindiana.it is a non-profit and crowd-sourced project that aims to help people during the lockdown due to \textbf{COVID-19}. Filaindiana.it is a web application that reports the length of the supermarket queues by using user-provided data. I developed and deployed some back-end Python functions in a serverless architecture (AWS Lambda) that uses a NoSQL database (Amazon DynamoDB) hosted on Amazon Web Services.
+        {
+        Filaindiana.it è un progetto non-profit e crowd-sourced che vuole essere d'aiuto alla popolazione durante il periodo di lockdown dovuto al diffondersi di \textbf{COVID-19}. Filaindiana.it è un'applicazione web che, basandosi sulle segnalazione dei suoi utenti, permette di avere una stima della coda presente nei vari supermercati d'Italia. Mi sono occupato dello sviluppo e messa in opera su una architettura serverless (AWS Lambda) di alcune delle funzionalità di back-end del progetto. 
         \begin{description}
         \item[Tools:] Amazon DynamoDB, AWS Labmda, Serverless framework (open source), Python.
         \end{description}}

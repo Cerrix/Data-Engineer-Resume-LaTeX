@@ -1,4 +1,4 @@
-\ProvidesClass{twentysecondcv}[2015/02/28 CV class]
+\ProvidesClass{twentysecondcvit}[2015/02/28 CV class]
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}
 
@@ -15,7 +15,7 @@
 \defaultfontfeatures{
     Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
 \usepackage{fontawesome}
-\usepackage[english]{babel}
+\usepackage[italian]{babel}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
